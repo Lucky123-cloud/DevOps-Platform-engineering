@@ -1,0 +1,11 @@
+we need to know how to build our own images, but first we need to know what is an image and why do we need it.
+What is an image: 
+- a read-only, static template that contains all the instructions and components needed to create a Docker container
+
+
+docker image is read only, anytime we run a container, the container builds from the image and it only adds
+an executable layer on top of what containers images already have. 
+
+each instruction line in docker image is a layer. 
+
+Here are the 
