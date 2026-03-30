@@ -11,3 +11,27 @@ each instruction line in docker image is a layer.
 Here are the two main principles of docker image:
 1. docker images are immutable. Once an image is created it can't be modified. You can only make a new image or add changes on top of it
 2. Container images are composed of layers. Each layer represnt a set of file system changes that add, remove or modify files. 
+
+
+we write docker images in Dockerfile. After that we need to run it to produce the docker images.
+we do that using this command, "docker image build ."
+
+then after that, just as we do with containers, we do this, docker image <command> <option>
+
+When docker wants to build an image it only asks for two precise things,
+- The docker file (Dockerfile)
+- The context for the build
+
+And that happens here:
+- docker file - Dockerfile
+- context - Where the docker file is located, that is done using the small dot (".")
+
+
+//what about the tagging? (is this not --name in conatiner?):
+- ealier on we said we can build our customer docker file by just writing "docker image build ."
+- So the only way to identify this is by the ID only once the build is complete. 
+- So how do we solve this? In contaienr we had an option we used called --name which allowed us to name our continaters we
+starting them so as it is easier to identify them. 
+- in images we use the --tag or -t 
+-So it would be something like this:
+`docker image build --tag <the name you want to give it> .`  DO NOT FORGET the dot (".") at the end. 
