@@ -1,0 +1,11 @@
+When we say docker we simply mean packaging our application in containers
+so that we can ship the containers and our application will work just well
+anywhere.
+
+But for us to really understand docker, we need to understand the concept
+of containers and containerization: Docker came in years later after containerization
+technology was already there for years. containerization technology was started in 
+2007. 
+
+BUt we first need to even understand the deeper part of runnning technology in 
+bare metal, then hypervisor, then containerization as a whole now. 
