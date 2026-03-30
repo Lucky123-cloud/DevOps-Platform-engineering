@@ -45,3 +45,14 @@ docker container MySQL:5.7 - then this will give us the 5.7 verison.
 
 We can do it here for out nginx project like this:
 docker image build --tag custom-nginx:packaged . (NEVER FORGET THE .)
+
+
+//Everything has an end, how about deleting the images?
+- We use a simple thing here, we first list the images to check which one we need out
+- we use `docker images` or `docker image ls`
+- Now that we have them, we can see which one we dont need and remove it, here is how:
+docker image rm <image identifier>
+- You can also prune all images that are un-tagged and dangling. 
+- Here is how, `docker image prune --force` (though we need to be careful with this one)
+- You can also use the --all or -a to remove all the images in the cached registry in your machine. 
+`docker image rm --all`
