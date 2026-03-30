@@ -8,4 +8,6 @@ an executable layer on top of what containers images already have.
 
 each instruction line in docker image is a layer. 
 
-Here are the 
+Here are the two main principles of docker image:
+1. docker images are immutable. Once an image is created it can't be modified. You can only make a new image or add changes on top of it
+2. Container images are composed of layers. Each layer represnt a set of file system changes that add, remove or modify files. 
