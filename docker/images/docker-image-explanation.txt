@@ -35,3 +35,13 @@ starting them so as it is easier to identify them.
 - in images we use the --tag or -t 
 -So it would be something like this:
 `docker image build --tag <the name you want to give it> .`  DO NOT FORGET the dot (".") at the end. 
+
+But there is still more to tag we can do, here is the "more" to do:
+- Assume we want to call our image build a certain name but we also need to include the version, we can do it, here is how:
+--tag <image repository>:<image tag> 
+
+For example, if we want to run a verison of MySQL version 5.7 we do this:
+docker container MySQL:5.7 - then this will give us the 5.7 verison.
+
+We can do it here for out nginx project like this:
+docker image build --tag custom-nginx:packaged . (NEVER FORGET THE .)
