@@ -56,3 +56,5 @@ docker image rm <image identifier>
 - Here is how, `docker image prune --force` (though we need to be careful with this one)
 - You can also use the --all or -a to remove all the images in the cached registry in your machine. 
 `docker image rm --all`
+
+How do we understand the many layers of docker?
