@@ -1,0 +1,1 @@
+UTS namespace provides isolation of hostname and domain name (DNS) of a process from the host system.

@@ -1,0 +1,24 @@
+what is namespace?
+
+- It provides isolation feature in linux 
+
+in containers, namespaces are used to provide container isolation. 
+
+There are many types of namespaces but we will explore only 6 of them
+
+namespaces
+============
+
+- UTS
+- IPC
+- User
+- Process
+- Mount
+- Network
+
+But for the namespace to occur we need to provide and create create this name spaces
+and for that matter, we have important system calls that helps us with that
+ - fork() 
+ - clone()
+ - Unshare()
+ - setns()
