@@ -1,21 +1,19 @@
 FROM ubuntu:latest
 
 RUN apt-get update && \
-    apt-get install build-essential\
-                    libpcre3 \
-                    libpcre3-dev \
-                    zlib1g \
-                    zlib1g-dev \
-                    libssl1.1 \
-                    libssl1-dev \
-                    -y && \
-    apt-get clean && rm -rf /var/lib/apt/list/*
-
+    apt-get install -y build-essential \
+    libpcre3 \
+    libpcre3-dev \
+    zlib1g \
+    zlib1g-dev \
+    libssl-dev \
+    curl && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ARG FILENAME="nginx-1.28.3"
 ARG EXTENSION="tar.gz"
 
-ADD https://nginx.org/dowload/${FILENAME}.${EXTENSION} .
+RUN curl -O https://nginx.org/download/${FILENAME}.${EXTENSION}
 
 RUN tar -xvf ${FILENAME}.${EXTENSION} && rm ${FILENAME}.${EXTENSION}
 
