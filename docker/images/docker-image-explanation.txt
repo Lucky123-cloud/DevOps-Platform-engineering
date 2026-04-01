@@ -64,3 +64,14 @@ docker image rm <image identifier>
 How do we understand the many layers of docker?
 ================================================
 
+You see docker filesystem is built on understanding linux union 
+
+filesystem union in linux should be known to understand this:
+
+Linux filesystem otherwise called overlay file system has 3 layers 
+-lower layer
+-upper layer
+-overlay
+
+any duplicate in upper and lower layer is contained in overlay with the verison of the upper layer. 
+Lower layer are read only
